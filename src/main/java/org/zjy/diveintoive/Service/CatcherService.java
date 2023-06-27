@@ -5,10 +5,8 @@ import org.springframework.stereotype.Service;
 import org.zjy.diveintoive.Utils.ConstantUtil;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -25,8 +23,9 @@ public class CatcherService {
             List<String> res = new ArrayList<>();
             for (File f:files) {
                 String filename = f.getName();
-                if (filename.contains("jpeg")) res.add(serverPathPrefix+filename);
+                if (hasValidSuffix(filename)) res.add(serverPathPrefix+filename);
             }
+            Collections.sort(res);
             return res;
         }
         return new ArrayList<>();
@@ -36,5 +35,9 @@ public class CatcherService {
 
     public String getPath(){
         return constantUtil.STORAGE_PATH;
+    }
+
+    public boolean hasValidSuffix(String filename){
+        return filename.contains("jpeg") || filename.contains("gif");
     }
 }
