@@ -32,12 +32,12 @@ public class NetworkUtil {
         return "0.0.0.0";
 
     }
-    private String ip;
+    private final String ip = "192.168.0.173";
 
     public String getIP(){
-        if (ip == null){
-            ip = queryIP();
-        }
+//        if (ip == null){
+//            ip = queryIP();
+//        }
         return ip;
     }
 
