@@ -1,6 +1,7 @@
 # Dive_Into_IVE
 
-## Features:
-1. Catch photo by URL(Not work with ins/twi inside the wall)
-2. Copy photo from local directory to storage
-3. Show photos
+
+## how to run in the container?
+1. run in a container equipped with maven/jdk8/git
+2. git pull
+3. mvn spring-boot:run
