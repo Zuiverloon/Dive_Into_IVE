@@ -61,6 +61,11 @@ public class DiveintoiveApplication {
 		return catcherService.iveImages();
 	}
 
+	@PostMapping("/genHash")
+	public int genHash(){
+		return 1;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(DiveintoiveApplication.class, args);
 	}
