@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zjy.diveintoive.Utils.ConstantUtil;
 import org.zjy.diveintoive.Utils.FileCopyUtil;
+import org.zjy.diveintoive.Utils.HashUtil;
+import org.zjy.diveintoive.Utils.RedisUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +16,12 @@ public class CopyService {
     private ConstantUtil constantUtil;
     @Autowired
     private FileCopyUtil fileCopyUtil;
+
+    @Autowired
+    private HashUtil hashUtil;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     public int localCopy(String name){
         File srcDir = new File(constantUtil.STORAGE_PATH+name+"_Local");
@@ -26,10 +34,17 @@ public class CopyService {
         for (File f:srcFiles){
             String srcFilePath = f.getPath();
             System.out.println(srcFilePath+" copying");
+            if (f.isDirectory())continue;
             if (isHiddenFile(f)){
                 System.out.println(srcFilePath+" is a hidden file!");
+                continue;
             }
-            else if (isGIF(f)){
+            if (isDup(f)){
+                System.out.println(srcFilePath+" is duplicated");
+                f.renameTo(new File(f.getParent()+"/dup_"+f.getName()));
+                continue;
+            }
+            if (isGIF(f)){
                 String destFilePath = constantUtil.STORAGE_PATH+name+"_"+System.currentTimeMillis()+".gif";
                 if (fileCopyUtil.copy(f.getPath(),destFilePath)){
                     boolean deleteRes = f.delete();
@@ -78,5 +93,21 @@ public class CopyService {
     private boolean isGIF(File f){
         String filename = f.getName();
         return filename.endsWith("gif") || filename.endsWith("GIF");
+    }
+
+    private boolean isDup(File f){
+        String hashString = hashUtil.getHashStringByFile(f);
+        if (hashString == null){
+            System.out.println("Hash Fail!");
+            return false;
+        }
+        String key = constantUtil.HASH_PREFIX+hashString;
+        if (redisUtil.keyExists(key)){
+            return true;
+        }
+        else{
+            redisUtil.setKey(key);
+            return false;
+        }
     }
 }

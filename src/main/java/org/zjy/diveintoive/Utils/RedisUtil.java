@@ -16,4 +16,15 @@ public class RedisUtil {
         }
         return jedis;
     }
+
+    public int setKey(String key){
+        Jedis jedis = getJedis();
+        jedis.set(key,"1");
+        return 1;
+    }
+
+    public boolean keyExists(String key){
+        Jedis jedis = getJedis();
+        return jedis.exists(key);
+    }
 }

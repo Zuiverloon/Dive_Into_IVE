@@ -22,6 +22,7 @@ public class ConstantUtil {
     public final String LIZ_GAEUL = "Liz_Gaeul";
     public final String STORAGE_PATH = "/Users/zjy/Desktop/IVE/";
 //    public final String STORAGE_PATH = "/file/IVE/";
+    public final String HASH_PREFIX = "IVE_";
 
 
 
