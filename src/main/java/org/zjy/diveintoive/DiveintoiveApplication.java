@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 import org.zjy.diveintoive.Service.CatcherService;
 import org.zjy.diveintoive.Service.CopyService;
+import org.zjy.diveintoive.Service.HashService;
 import org.zjy.diveintoive.Utils.ConstantUtil;
 
 import java.util.List;
@@ -26,6 +27,9 @@ public class DiveintoiveApplication {
 
 	@Autowired
 	CopyService copyService;
+
+	@Autowired
+	HashService hashService;
 
 
 	@GetMapping("/")
@@ -60,6 +64,22 @@ public class DiveintoiveApplication {
 	public List<String> iveImages(){
 		return catcherService.iveImages();
 	}
+
+	@PostMapping("/genHash")
+	public int genHash(){
+		return hashService.genHash();
+	}
+
+	@GetMapping("getHash")
+	public List<String> getHash(){
+		return hashService.getHash();
+	}
+
+	@PostMapping("deleteHash")
+	public int deleteHash(){
+		return hashService.deleteHash();
+	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DiveintoiveApplication.class, args);
