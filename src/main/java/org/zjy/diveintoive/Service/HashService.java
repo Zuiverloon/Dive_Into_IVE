@@ -48,18 +48,14 @@ public class HashService {
     }
 
     public List<String> getHash(){
-        Jedis jedis = redisUtil.getJedis();
         String pattern = constantUtil.HASH_PREFIX+"*";
-        Set<String> hashStrings = jedis.keys(pattern);
-        System.out.println(hashStrings.size());
-        return new ArrayList<>(hashStrings);
+        return new ArrayList<>(redisUtil.getPattern(pattern));
     }
 
     public int deleteHash(){
         List<String> hashString = getHash();
-        Jedis jedis = redisUtil.getJedis();
         for (String s:hashString){
-            jedis.del(s);
+            redisUtil.deleteKey(s);
         }
         return 1;
     }

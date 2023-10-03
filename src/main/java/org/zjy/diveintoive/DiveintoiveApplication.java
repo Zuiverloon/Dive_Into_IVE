@@ -65,17 +65,17 @@ public class DiveintoiveApplication {
 		return catcherService.iveImages();
 	}
 
-	@PostMapping("/genHash")
+	@PostMapping("/hash")
 	public int genHash(){
 		return hashService.genHash();
 	}
 
-	@GetMapping("getHash")
+	@GetMapping("/hash")
 	public List<String> getHash(){
 		return hashService.getHash();
 	}
 
-	@PostMapping("deleteHash")
+	@DeleteMapping("/hash")
 	public int deleteHash(){
 		return hashService.deleteHash();
 	}
