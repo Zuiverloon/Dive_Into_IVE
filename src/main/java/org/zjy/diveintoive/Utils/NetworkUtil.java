@@ -1,5 +1,6 @@
 package org.zjy.diveintoive.Utils;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.net.Inet4Address;
@@ -32,12 +33,10 @@ public class NetworkUtil {
         return "0.0.0.0";
 
     }
-    private final String ip = "192.168.0.173";
+    @Value("${server.ip}")
+    private String ip;
 
     public String getIP(){
-//        if (ip == null){
-//            ip = queryIP();
-//        }
         return ip;
     }
 
