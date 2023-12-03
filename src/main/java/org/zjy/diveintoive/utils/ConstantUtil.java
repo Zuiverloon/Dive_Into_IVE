@@ -1,11 +1,8 @@
-package org.zjy.diveintoive.Utils;
+package org.zjy.diveintoive.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.zjy.diveintoive.DiveintoiveApplication;
 
 @Component
 public class ConstantUtil {
@@ -20,7 +17,8 @@ public class ConstantUtil {
     public final String LIZ = "Liz";
     public final String GAEUL = "Gaeul";
     public final String LIZ_GAEUL = "Liz_Gaeul";
-    public final String STORAGE_PATH = "/Users/zjy/Desktop/IVE/";
+    public final String LOCAL_STORAGE_PATH = "/Users/zjy/Desktop/IVE/";
+    public final String REMOTE_STORAGE_PATH = "/Users/zjy/Desktop/ivebackup/content/";
 //    public final String STORAGE_PATH = "/file/IVE/";
     public final String HASH_PREFIX = "IVE_";
 

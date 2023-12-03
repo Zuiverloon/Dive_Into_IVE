@@ -1,4 +1,4 @@
-package org.zjy.diveintoive.Utils;
+package org.zjy.diveintoive.utils;
 
 import org.springframework.stereotype.Component;
 
@@ -8,11 +8,11 @@ import java.nio.file.Files;
 
 @Component
 public class FileCopyUtil {
-    public boolean copy(String src,String dst){
+    public boolean copy(String src, String dst) {
         File srcFile = new File(src);
         File dstFile = new File(dst);
         try {
-            Files.copy(srcFile.toPath(),dstFile.toPath());
+            Files.copy(srcFile.toPath(), dstFile.toPath());
         } catch (IOException e) {
             e.printStackTrace();
             return false;

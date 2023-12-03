@@ -1,8 +1,8 @@
-package org.zjy.diveintoive.Service;
+package org.zjy.diveintoive.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.zjy.diveintoive.Utils.ConstantUtil;
+import org.zjy.diveintoive.utils.ConstantUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class CatcherService {
     private ConstantUtil constantUtil;
 
     public List<String> iveImages(){
-        File dir = new File(constantUtil.STORAGE_PATH);
+        File dir = new File(constantUtil.LOCAL_STORAGE_PATH);
         File[] files = dir.listFiles();
         String serverPathPrefix = constantUtil.getIVEServerResourcePath();
         if (files!=null && files.length>0){
@@ -34,7 +34,7 @@ public class CatcherService {
 
 
     public String getPath(){
-        return constantUtil.STORAGE_PATH;
+        return constantUtil.LOCAL_STORAGE_PATH;
     }
 
     public boolean hasValidSuffix(String filename){

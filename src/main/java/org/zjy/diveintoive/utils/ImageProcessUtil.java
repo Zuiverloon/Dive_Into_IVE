@@ -1,4 +1,4 @@
-package org.zjy.diveintoive.Utils;
+package org.zjy.diveintoive.utils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
