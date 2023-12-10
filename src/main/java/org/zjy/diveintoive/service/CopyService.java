@@ -6,10 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.zjy.diveintoive.utils.ConstantUtil;
-import org.zjy.diveintoive.utils.FileCopyUtil;
-import org.zjy.diveintoive.utils.HashUtil;
-import org.zjy.diveintoive.utils.RedisUtil;
+import org.zjy.diveintoive.utils.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,6 +41,12 @@ public class CopyService {
     private RedisUtil redisUtil;
 
     ExecutorService executorService;
+
+    private int RANDOM_LEN = 4;
+
+    private String SUFFIX_GIF = ".gif";
+
+    private String SUFFIX_JPG = ".jpg";
 
     public CopyService() {
         executorService = Executors.newFixedThreadPool(5);
@@ -89,20 +92,22 @@ public class CopyService {
             LOGGER.info("{} is a hidden file", f.getPath());
             return processStatus;
         }
-        if (isDup(f)) {
+        String residKey = getRedisKey(f);
+        if (isDup(residKey)) {
             LOGGER.warn("{} is duplicated", f.getPath());
             f.renameTo(new File(f.getParent() + "/dup_" + f.getName()));
             return processStatus;
         }
+        String newFileNameWithoutExtension = memberName + "_" + System.currentTimeMillis() + RandomUtil.getRandomSuffix(RANDOM_LEN);
         String srcFilePath = null;
         String dstFileName = null;
         if (isGIF(f)) {
             LOGGER.warn("{} is a gif", f.getPath());
             srcFilePath = f.getPath();
-            dstFileName = memberName + "_" + System.currentTimeMillis() + ".gif";
+            dstFileName = newFileNameWithoutExtension + SUFFIX_GIF;
         } else {
             LOGGER.warn("{} is an image", f.getPath());
-            dstFileName = memberName + "_" + System.currentTimeMillis() + ".jpeg";
+            dstFileName = newFileNameWithoutExtension + SUFFIX_JPG;
             String jpgPath = f.getParent() + "/" + dstFileName;
             if (generateJPEG(f.getPath(), jpgPath)) {
                 srcFilePath = jpgPath;
@@ -123,6 +128,7 @@ public class CopyService {
             processStatus.setSuccess(status);
             return processStatus;
         }
+        setRedisKey(residKey);
         processStatus.setSuccess(false);
         return processStatus;
     }
@@ -149,18 +155,20 @@ public class CopyService {
         return filename.endsWith("gif") || filename.endsWith("GIF");
     }
 
-    private boolean isDup(File f) {
-        String hashString = hashUtil.getHashStringByFile(f);
-        if (hashString == null) {
+    private boolean isDup(String key) {
+        if (key == null) {
             System.out.println("Hash Fail!");
             return false;
         }
-        String key = constantUtil.HASH_PREFIX + hashString;
-        if (redisUtil.keyExists(key)) {
-            return true;
-        } else {
-            redisUtil.setKey(key);
-            return false;
-        }
+        return redisUtil.keyExists(key);
+    }
+
+    private void setRedisKey(String key) {
+        redisUtil.setKey(key);
+    }
+
+    private String getRedisKey(File f) {
+        String hashString = hashUtil.getHashStringByFile(f);
+        return hashString == null ? null : constantUtil.HASH_PREFIX + hashString;
     }
 }
