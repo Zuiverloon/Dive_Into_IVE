@@ -64,6 +64,7 @@ public class IveImageController {
         failedFileName.addAll(copyService.localCopy(constantUtil.GAEUL));
         failedFileName.addAll(copyService.localCopy(constantUtil.LIZ));
         failedFileName.addAll(copyService.localCopy(constantUtil.LIZ_GAEUL));
+        failedFileName.addAll(copyService.localCopy(constantUtil.YOON));
         return new ResponseEntity<>(failedFileName, HttpStatus.OK);
     }
 
