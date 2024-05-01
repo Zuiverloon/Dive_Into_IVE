@@ -15,4 +15,8 @@ public class FileReaderUtil {
             return new byte[0];
         }
     }
+
+    public String readFileString(String path) {
+        return new String(readFileAsBytes(path));
+    }
 }

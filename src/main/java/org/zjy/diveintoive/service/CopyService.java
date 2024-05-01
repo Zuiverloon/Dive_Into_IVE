@@ -160,10 +160,14 @@ public class CopyService {
             System.out.println("Hash Fail!");
             return false;
         }
+        if (!redisUtil.isActive()) return false;
         return redisUtil.keyExists(key);
     }
 
     private void setRedisKey(String key) {
+        if (!redisUtil.isActive()) {
+            return;
+        }
         redisUtil.setKey(key);
     }
 

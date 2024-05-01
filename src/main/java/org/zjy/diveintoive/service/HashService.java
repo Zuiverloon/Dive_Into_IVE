@@ -50,12 +50,19 @@ public class HashService {
             //write into redis
             //System.out.println(hashString);
             String key = constantUtil.HASH_PREFIX + hashString;
-            redisUtil.setKey(key);
+
+            if (!redisUtil.isActive()){
+                redisUtil.setKey(key);
+            }
+
         }
         return 1;
     }
 
     public List<String> getHash() {
+        if (!redisUtil.isActive()) {
+            return new ArrayList<>();
+        }
         String pattern = constantUtil.HASH_PREFIX + "*";
         return new ArrayList<>(redisUtil.getPattern(pattern));
     }
@@ -63,6 +70,9 @@ public class HashService {
     public int deleteHash() {
         List<String> hashString = getHash();
         for (String s : hashString) {
+            if (!redisUtil.isActive()) {
+                continue;
+            }
             redisUtil.deleteKey(s);
         }
         return 1;

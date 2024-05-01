@@ -1,5 +1,6 @@
 package org.zjy.diveintoive.utils;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
@@ -12,6 +13,9 @@ public class RedisUtil {
 
     @Autowired
     NetworkUtil networkUtil;
+
+    @Getter
+    private boolean isActive = false;
 
     public RedisUtil(NetworkUtil networkUtil) {
         this.networkUtil = networkUtil;
