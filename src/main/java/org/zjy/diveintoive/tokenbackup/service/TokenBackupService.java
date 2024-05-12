@@ -163,6 +163,9 @@ public class TokenBackupService {
             case "BITGET":
                 token = bitgetToken;
                 break;
+            case "FUEL":
+                token = fuelToken;
+                break;
         }
         if (token == null) {
             System.out.println("Invalid wallet type");
@@ -176,6 +179,14 @@ public class TokenBackupService {
 
     public boolean validate(String plaintext, String cipher) {
         return cipher.equals(encryptDes(plaintext)) && plaintext.equals(decryptDES(cipher));
+    }
+
+    public List<String> encryptWalletToken(String plainText) {
+        String[] walletTokens = plainText.split(" ");
+        if (walletTokens.length != 12) {
+            throw new RuntimeException("Invalid Wallet Phrase");
+        }
+        return Arrays.stream(walletTokens).map(this::encryptDes).collect(Collectors.toList());
     }
 
 }

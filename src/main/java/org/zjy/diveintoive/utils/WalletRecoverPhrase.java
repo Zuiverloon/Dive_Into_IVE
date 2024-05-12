@@ -123,5 +123,20 @@ public class WalletRecoverPhrase {
             "J7HykYoXCE8="
     };
 
+    public static String[] fuelToken = {
+            "Ovk/r6E+jsM=",
+            "ytJZrjUvf+c=",
+            "VmwWTnZcj34=",
+            "HmRXamyW2ZA=",
+            "XjphqzwIoJ4=",
+            "SDcp8JI3+aU=",
+            "CC+zJ9d2+JE=",
+            "64XrOl8si2U=",
+            "s7SP4KhOMyU=",
+            "lWV+Ei+fxFs=",
+            "MhnHcnuODWw=",
+            "/8AqRVNiltY="
+    };
+
 
 }

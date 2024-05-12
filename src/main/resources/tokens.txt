@@ -36,3 +36,4 @@ overwallet {fDZqmnngXCk=}
 overwalletrecover {37cMcytJL1q48ujoSUjEbQ==}
 multisynq junyao43.zhang@outlook.com {es/vzjuGHq0=}
 cryptopia junyao43.zhang@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
+fuelwallet {h9bZJ/RKpIG48ujoSUjEbQ==}

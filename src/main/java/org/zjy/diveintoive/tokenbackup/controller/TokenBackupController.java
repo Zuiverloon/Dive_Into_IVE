@@ -64,4 +64,14 @@ public class TokenBackupController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PostMapping("/encrypt-wallet")
+    public ResponseEntity<Object> encryptWallet(@RequestBody EncryptDecryptRequest request) {
+        try{
+            return new ResponseEntity<>(tokenBackupService.encryptWalletToken(request.getPlaintext()), HttpStatus.OK);
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
