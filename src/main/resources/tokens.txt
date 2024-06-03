@@ -37,3 +37,9 @@ overwalletrecover {37cMcytJL1q48ujoSUjEbQ==}
 multisynq junyao43.zhang@outlook.com {es/vzjuGHq0=}
 cryptopia junyao43.zhang@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
 fuelwallet {h9bZJ/RKpIG48ujoSUjEbQ==}
+analog junyao43.zhang@outlook.com {h9bZJ/RKpIFIFI6A1HxPOg==}
+subwallet {37cMcytJL1pIFI6A1HxPOg==}
+bitgetwallet(mac) {37cMcytJL1pIFI6A1HxPOg==}
+initia(gmail) {37cMcytJL1pIFI6A1HxPOg==}
+bitgetcex {h9bZJ/RKpIG48ujoSUjEbQ==}
+npm zuiverloon/junyao43.zhang@outlook.com {7HF/H9bKuf1J6TZZd+AGPw==}

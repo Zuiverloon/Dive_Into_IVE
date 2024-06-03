@@ -138,5 +138,47 @@ public class WalletRecoverPhrase {
             "/8AqRVNiltY="
     };
 
+    public static String[] subwallet = {
+            "QQcH+xBXSQQ=",
+            "UHsJp9xOfa0=",
+            "adSjYSAEQLE=",
+            "pLFD1qITSTM=",
+            "0M5zJQeDHxc=",
+            "NxHc5Bp4YYY=",
+            "3DprEVDY/Mo=",
+            "wxS4js/yGBA=",
+            "O2XbDlw4euU=",
+            "uSk/GGNuPqY=",
+            "RMA7jUheyaxIFI6A1HxPOg==",
+            "0AO4m2muHYk="
+    };
+
+    public static String[] tonWallet = {
+            "ziKLMkVzFZZIFI6A1HxPOg==",
+            "6gLSwtic+gE=",
+            "l++pOJzfef0=",
+            "9UxtQ9rnz9E=",
+            "70T37vkyIJk=",
+            "mt32/VD4LT4=",
+            "LZeKWE0Jk00=",
+            "uVyfQxoS4A8=",
+            "BVP9uGJ0MaI=",
+            "oJenJ0hpU8M=",
+            "WsG+7ykaeJ4=",
+            "7Nz1ideoImM=",
+            "+bnKnF7YYXw=",
+            "nLfrwXg+O0I=",
+            "C9LvsMUhIl0=",
+            "3+JHCBohxhs=",
+            "SDaRPxTnSaU=",
+            "Vtc98a7wWB8=",
+            "zgJxdeLPcw4=",
+            "MFri/GdMC7Q=",
+            "dABkBGbi62k=",
+            "LyYK4AbQuYo=",
+            "I5T4mnXdSDw=",
+            "xgDDgGBIOKE="
+    };
+
 
 }

@@ -12,7 +12,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.security.InvalidKeyException;
@@ -166,6 +165,12 @@ public class TokenBackupService {
             case "FUEL":
                 token = fuelToken;
                 break;
+            case "SUBWALLET":
+                token = subwallet;
+                break;
+            case "TONWALLET":
+                token = tonWallet;
+                break;
         }
         if (token == null) {
             System.out.println("Invalid wallet type");
@@ -183,7 +188,7 @@ public class TokenBackupService {
 
     public List<String> encryptWalletToken(String plainText) {
         String[] walletTokens = plainText.split(" ");
-        if (walletTokens.length != 12) {
+        if (walletTokens.length != 12 && walletTokens.length != 24) {
             throw new RuntimeException("Invalid Wallet Phrase");
         }
         return Arrays.stream(walletTokens).map(this::encryptDes).collect(Collectors.toList());
