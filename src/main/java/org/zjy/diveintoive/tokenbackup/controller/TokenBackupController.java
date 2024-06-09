@@ -19,7 +19,7 @@ public class TokenBackupController {
     @GetMapping("/account")
     public ResponseEntity<Object> getAccountTokens() {
         try{
-            return new ResponseEntity<>(tokenBackupService.readAndDecrypt(), HttpStatus.OK);
+            return new ResponseEntity<>(tokenBackupService.readAndDecrypt().stream().sorted(), HttpStatus.OK);
         } catch (Exception e){
             return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
