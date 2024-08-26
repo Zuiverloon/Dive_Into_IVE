@@ -171,6 +171,12 @@ public class TokenBackupService {
             case "TONWALLET":
                 token = tonWallet;
                 break;
+            case "RAZOR":
+                token = razorWallet;
+                break;
+            case "MEMEFI":
+                token = memefiWallet;
+                break;
         }
         if (token == null) {
             System.out.println("Invalid wallet type");

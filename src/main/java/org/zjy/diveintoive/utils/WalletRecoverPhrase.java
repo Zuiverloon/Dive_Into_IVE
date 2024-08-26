@@ -180,5 +180,35 @@ public class WalletRecoverPhrase {
             "xgDDgGBIOKE="
     };
 
+    public static String[] razorWallet = {
+            "DybjnWeceMk=",
+            "2lBW4rL7Ut4=",
+            "5bQ3RSf/yVM=",
+            "1WW0g7NHnQw=",
+            "OJs0oFIyBE4=",
+            "QSvmdm22J5s=",
+            "70vGrv6iPG8=",
+            "zX41ewOL3mI=",
+            "j5LaehLcfwk=",
+            "ANsawJq2REM=",
+            "1xGwnnAFDxE=",
+            "1fIfztyfuNw="
+    };
+
+    public static String[] memefiWallet = {
+            "yplLkG3nV1E=",
+            "TYxFr2+sHds=",
+            "yz3C70GjaS0=",
+            "y/1LB3u1xvE=",
+            "L2jf8S7uEMI=",
+            "AXeMTQks3ww=",
+            "0W3Z+OWRSwo=",
+            "C89zS/zDbzs=",
+            "JeXkwmdhsBw=",
+            "RfGdV8Nhpy0=",
+            "c3rCu0JK+Pc=",
+            "8mhEf1ZhazA="
+    };
+
 
 }
