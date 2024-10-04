@@ -177,6 +177,33 @@ public class TokenBackupService {
             case "MEMEFI":
                 token = memefiWallet;
                 break;
+            case "PRE0603":
+                token = PRE_0603;
+                break;
+            case "PRE4201":
+                token = PRE_4201;
+                break;
+            case "PRE1121":
+                token = PRE_1121;
+                break;
+            case "PRE0924":
+                token = PRE_0924;
+                break;
+            case "PRE0901":
+                token = PRE_0901;
+                break;
+            case "PRE0221":
+                token = PRE_0221;
+                break;
+            case "PRE0203":
+                token = PRE_0203;
+                break;
+            case "PRE0831":
+                token = PRE_0831;
+                break;
+            case "GIT":
+                token = GIT;
+                break;
         }
         if (token == null) {
             System.out.println("Invalid wallet type");

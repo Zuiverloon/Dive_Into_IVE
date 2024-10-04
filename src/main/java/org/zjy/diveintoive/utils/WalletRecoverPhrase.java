@@ -210,5 +210,146 @@ public class WalletRecoverPhrase {
             "8mhEf1ZhazA="
     };
 
+    public static String[] PRE_0603 = {
+            "1IufTcbEkAY=",
+            "2H2xzE4UHj8=",
+            "cExGUFFGYPo=",
+            "LQf9CJ65pjI=",
+            "OAbV7zmE+eM=",
+            "0KXC+MzQvRY=",
+            "c8WTcJIFPIE=",
+            "wdjTcn3hNkk=",
+            "+IGz8Fc7fzw=",
+            "nGcx8hQX2y4=",
+            "kvB6AtUqty0=",
+            "A/b789OKdBE="
+    };
+
+    public static final String[] PRE_4201 = {
+            "szhC+ca2MO8=",
+            "ftvcj6IFIzQ=",
+            "l3A1GULU04M=",
+            "pP8AlITtHJs=",
+            "fhlW++pPPAk=",
+            "s5M0G/6FniE=",
+            "qOLLBVW3DEE=",
+            "ZabeKSM8qcg=",
+            "0juEJIApw3o=",
+            "OFs8rfcPAdk=",
+            "YaF4afbE4CtIFI6A1HxPOg==",
+            "77707GP83F4="
+    };
+
+    public static final String[] PRE_1121 = {
+            "Y87NM/mJ+N4=",
+            "Hrn3Mn8vN0hIFI6A1HxPOg==",
+            "0W3Z+OWRSwo=",
+            "CyTBxbQ8ocE=",
+            "jgDSj6iNB18=",
+            "7sZIqh6S3FY=",
+            "iUAB2mOGS6U=",
+            "VW4lXQFp6uE=",
+            "25ikc2eTkEs=",
+            "R5VnS1cyVps=",
+            "sj2SlOVIhC0=",
+            "gXqdLBHGZNs="
+    };
+
+    public static final String[] PRE_0924 = {
+            "BUFEKSrrc5hIFI6A1HxPOg==",
+            "+HTLbQksrWY=",
+            "+OnhPP3H8Uc=",
+            "xDrclrO0XFZIFI6A1HxPOg==",
+            "ZESnVC70JiY=",
+            "eeUcmpayIaQ=",
+            "bnC5E8K9ZlY=",
+            "PK4venhb6Xc=",
+            "c8WTcJIFPIE=",
+            "4jjSXlbyMtg=",
+            "AEkmGXBGCCc=",
+            "l8qVobtNZS0="
+    };
+
+    public static final String[] PRE_0901 = {
+            "IGltYJp3dEs=",
+            "AnG11MC/5v8=",
+            "dybqupB4xUI=",
+            "bTPIQPSLMM8=",
+            "9CgHeaoQxQY=",
+            "PX/kvhQ2+QI=",
+            "ZnGqHwdXLR0=",
+            "NzCAtXG2dZ4=",
+            "hCBYPxwqaFg=",
+            "SsVPK/fKvzg=",
+            "zkKPsIOimNo=",
+            "lipqWzmLwXQ="
+    };
+
+    public static final String[] PRE_0221 = {
+            "QSvmdm22J5s=",
+            "Xj8asPf/Gok=",
+            "Nzq5sZnnqtY=",
+            "rt70RthfuBw=",
+            "Uc99qLMC638=",
+            "zX41ewOL3mI=",
+            "QsEjtg5g/3Q=",
+            "byO4RWqfIog=",
+            "oiuOKIyEkws=",
+            "5xBSmr4iDmE=",
+            "uMy1vMV6fSI=",
+            "n4D/0Ag0Udk="
+    };
+
+    public static final String[] PRE_0203 = {
+            "DKcfiI35CzQ=",
+            "cZNPBPFmIs0=",
+            "82WW1j0Gh8M=",
+            "A0uG0xupnvk=",
+            "dABkBGbi62k=",
+            "n/OOVFiogJM=",
+            "XO/j3pVipOA=",
+            "ypzSyotjtic=",
+            "kVwt+yLAD1k=",
+            "0juEJIApw3o=",
+            "2Fy6gapiur8=",
+            "22P+wAF2o15IFI6A1HxPOg=="
+    };
+
+    public static final String[] PRE_0831 = {
+        "RObQCyorK2Q=",
+                "E7pJzXXmwQw=",
+                "GTiFQrWJLLM=",
+                "HR0gYtqmf5A=",
+                "BBrGzXINVr8=",
+                "ZhgdSJHi0QI=",
+                "d5bSuYV59YQ=",
+                "grUdoro+WR8=",
+                "tIenWFccOvc=",
+                "/tMqeZXFt9k=",
+                "sKkmBuo+C4o=",
+                "y0ijpYa2uhw="
+    };
+
+    public static final String[] GIT = {
+            "N7tI25MbTIOveOJWMwEz1A==",
+            "EHw23Q4n+q5nqJ1PlO/OvA==",
+            "Eow84xygB0cbrYmVHvvJcw==",
+            "BG1OJd0yJu0UEp8cT03qkA==",
+            "cYtLOeZe/nqCIbwZJDeUPg==",
+            "vLOjXJ0OEH5/yi5IHrgGNQ==",
+            "CLNdSncIL88HRfyE6vuxOw==",
+            "/fhUTtX7ekFotXTDvOHr1g==",
+            "MD9h6RMCkuGqQWvw6O1A6w==",
+            "1j9I+8XGznSHHNyE4EiU4g==",
+            "2pbWEz6XDnAxcUewQQ245A==",
+            "CgizE6BA4yJ22AHJPyLdWg==",
+            "kj8krENzH1Bc5XnDCQgwgg==",
+            "zKZ8EPCWMJNqUixaS6UGFw==",
+            "CnS9arkAHS7KjXHmUPsipA==",
+            "baa3gLCkZ7c/iqlrN1PYeQ=="
+    };
+
+
+
 
 }
