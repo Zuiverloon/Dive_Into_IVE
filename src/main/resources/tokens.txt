@@ -1,7 +1,7 @@
 metamaskwallet {37cMcytJL1r97xeHnVKN0g==}
-binance junyao43.zhang@outlook.com {h9bZJ/RKpIFIFI6A1HxPOg==}
+binance lueagzil.crypto@outlook.com {h9bZJ/RKpIFIFI6A1HxPOg==}
 binance authenticator {t1xlw+MluPKtwlS65748zkgUjoDUfE86}
-okx junyao43.zhang@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
+okx lueagzil.crypto@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
 estock junyaozhang {h9bZJ/RKpIFIFI6A1HxPOg==}
 phantomwallet {37cMcytJL1pIFI6A1HxPOg==}
 okxwallet {es/vzjuGHq0=}
@@ -41,7 +41,7 @@ analog junyao43.zhang@outlook.com {h9bZJ/RKpIFIFI6A1HxPOg==}
 subwallet {37cMcytJL1pIFI6A1HxPOg==}
 bitgetwallet(mac) {37cMcytJL1pIFI6A1HxPOg==}
 initia(gmail) {37cMcytJL1pIFI6A1HxPOg==}
-bitgetcex {h9bZJ/RKpIG48ujoSUjEbQ==}
+bitgetcex lueagzil.crypto@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
 npm zuiverloon/junyao43.zhang@outlook.com {7HF/H9bKuf1J6TZZd+AGPw==}
 gitee phonenumber {es/vzjuGHq0=}
 tonkeeperios {es/vzjuGHq0=}
@@ -52,3 +52,4 @@ leap {37cMcytJL1pIFI6A1HxPOg==}
 razor(movement) {37cMcytJL1pIFI6A1HxPOg==}
 atheneex junyao43.zhang@outlook.com {h9bZJ/RKpIG48ujoSUjEbQ==}
 luogu junyao43.zhang@outlook.com {ZGLCtDvg3sZIFI6A1HxPOg==}
+lueagzil.crypto@outlook.com {Ili4H3Z1uOZIFI6A1HxPOg==}
