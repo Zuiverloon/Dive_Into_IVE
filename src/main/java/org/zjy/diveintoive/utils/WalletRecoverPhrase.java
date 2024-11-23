@@ -19,6 +19,7 @@ public class WalletRecoverPhrase {
     }
 
     public static String[] metaMaskToken = {
+            //0x5f76...5f8e6D
             "qHk0igszO94=",
             "p46AR84v1X4=",
             "+MpO1HXsNoM=",
@@ -34,6 +35,7 @@ public class WalletRecoverPhrase {
     };
 
     public static String[] phantomToken = {
+            // 0xa9aa...67C2b2
             "iCcJwBP+3Z4=",
             "XHR59ljrhck=",
             "3Q/mGhfCXPI=",
@@ -109,6 +111,7 @@ public class WalletRecoverPhrase {
     };
 
     public static String[] bitgetToken = {
+            //0x915C...975A69
             "wKXXGPydqB0=",
             "XHR59ljrhck=",
             "2xdtdTwIJNo=",
@@ -154,6 +157,7 @@ public class WalletRecoverPhrase {
     };
 
     public static String[] tonWallet = {
+            // UQBL...rVSE
             "ziKLMkVzFZZIFI6A1HxPOg==",
             "6gLSwtic+gE=",
             "l++pOJzfef0=",
